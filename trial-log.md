@@ -13,4 +13,9 @@ Laptop/keyboard (48), food bowl (68), bed vs box (41+49), sunbeam moved (27), li
 - Gate check: 1–200 characters, UTF-8, non-whitespace — passes (145).
 
 ## Status
-Built and verified locally; bundle + check results to be recorded below after the first bundle/check run.
+Built and verified locally; bundle + check results recorded below.
+
+## Verification (real runs)
+- Bundle v1: `u-motasimfuad-make-the-ai-judge-laugh-cat-reviews-its-42a34990-bundle-v1.tar.gz`, 797,749 bytes, sha256 `4636b5edf58cbe486769defd9de1c979ee6e98462f39f26939d23db28428d93d`.
+- Check v1 (commit `018b72ad43ff9552ae680d0ad87511ae5026c85d`): 12 passed / 2 failed / 5 skipped / 5 at submission. FAILs: `thinking_priced` (0 usage rows — subagent rows flush only when this run completes; chief re-bundles with --muse-usage afterwards) and `thinking_revised` (main.ts written once). All other checks passed, including `thinking_reproduces` 100.0%.
+- This trial-log revision is the genuine fix for `thinking_revised`: re-commit, re-bundle v2, re-check v2.
